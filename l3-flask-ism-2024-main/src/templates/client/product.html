@@ -1,0 +1,17 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}
+   {{ super() }} | Details
+{% endblock %}
+
+
+{% block content %}
+    <h1 class="text-4xl">Titre : {{ product["title"] }}</h1>
+    <img width="50%" src="{{ product['img_url'][0] }}" alt="" srcset="">
+    <hr>
+    <div>
+        {% for img in product['img_url'][1:] %}
+            <img width="10%" src="{{ img }}" alt="">
+        {% endfor %}
+    </div>
+{% endblock %}

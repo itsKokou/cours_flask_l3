@@ -1,0 +1,39 @@
+python main.py 
+
+flash --app main run 
+
+ou 
+
+set FLASK_APP=main.py puis flask run 
+
+pip install flask-migrate
+
+flask db init
+
+flask db migrate 
+
+flask db upgrade  ou downgrade
+
+pip install Flask-SQLAlchemy
+
+
+export FLASK_APP=app.py  // ça passe pas 
+
+sqlite3 data.db // Creer la base de données
+
+python
+
+>>> from app import db, Etudiant 
+>>> e1 = Etudiant(name="Kokou")
+>>> e2 =  Etudiant(name="Godwin")
+>>> db.session.add_all([e1,e2]) 
+>>> db.session.commit()
+
+
+=============== Flask Login 
+
+pip install flask-login
+ 
+$env:FLASK_ENV="development"
+$env:PYTHONDONTWRITEBYTECODE=1
+

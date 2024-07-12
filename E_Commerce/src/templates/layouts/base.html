@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='/css/output.css')}}">
+    <title>E-COSMIXA</title>
+</head>
+<body>
+    {% include "shared/navbar.html" %}
+    <div>
+        {% block content %}
+            <h1>VOICI MON TEMPLATE</h1>
+        {% endblock %}
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+</html>

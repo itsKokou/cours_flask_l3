@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %} Ajout Article {% endblock %}
+
+
+{% block body %}
+
+<table class="table table-dark table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Non Produit</th>
+            <th scope="col">Prix d'avant</th>
+            <th scope="col">Price actuel</th>
+            <th scope="col">En Stock</th>
+            <th scope="col">Image</th>
+            <th scope="col">Vente Flash</th>
+            <th scope="col">Ajouter</th>
+
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <form action="" method="POST", enctype="multipart/form-data">
+                {{ form.hidden_tag() }}
+
+                <td>{{ form.product_name }}</td>
+                <td>{{ form.previous_price }}</td>
+                <td>{{ form.current_price }}</td>
+                <td>{{ form.in_stock }}</td>
+                <td>{{ form.product_picture() }}</td>
+                <td>{{ form.flash_sale }}</td>
+                <td>{{ form.add_product() }}</td>
+            </form>
+        </tr>
+    </tbody>
+</table>
+
+
+{% endblock %}
